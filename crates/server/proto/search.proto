@@ -1,0 +1,30 @@
+syntax = "proto3";
+package hybridsearch;
+
+service HybridSearch {
+  rpc Search (SearchRequest) returns (SearchResponse);
+  rpc AddDocument (AddDocumentRequest) returns (AddDocumentResponse);
+}
+
+message SearchRequest {
+  string query = 1;
+  uint32 top_k = 2;
+}
+
+message SearchResult {
+  uint32 doc_id = 1;
+  float score = 2;
+  string text = 3;
+}
+
+message SearchResponse {
+  repeated SearchResult results = 1;
+}
+
+message AddDocumentRequest {
+  string text = 1;
+}
+
+message AddDocumentResponse {
+  uint32 doc_id = 1;
+}

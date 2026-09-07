@@ -1,0 +1,10 @@
+[package]
+name = "embeddings"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ort = { version = "=2.0.0-rc.4", default-features = false, features = ["ndarray", "load-dynamic"] }
+ort-sys = "=2.0.0-rc.4"
+tokenizers = { version = "0.15", default-features = false, features = ["onig"] }
+anyhow = "1"

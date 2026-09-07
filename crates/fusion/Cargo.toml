@@ -1,0 +1,13 @@
+[package]
+name = "fusion"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bm25 = { path = "../bm25" }
+hnsw = { path = "../hnsw" }
+embeddings = { path = "../embeddings" }
+anyhow = "1"
+serde = { version = "1", features = ["derive"] }
+bincode = "1"
+memmap2 = "0.9"
